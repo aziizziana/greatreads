@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='materialize/css/materialize.css')}}"/>
+      <link rel="stylesheet" href="{{url_for('static', filename='static/styles.css')}}">
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    
+    <body>
+        <nav>
+        <div class="nav-wrapper">
+         
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="{{url_for('index')}}">Home</a>
+            <li><a href="{{url_for('login')}}">Login</a></li>
+            <li><a href="{{url_for('register')}}">Register</a></li>
+          </ul>
+        </div>
+      </nav>
+
+        
+      {% block content %}{% endblock %}    
+
+    
+
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Contact:</h5>
+            <p class="grey-text text-lighten-4">Office of Amazing books</p>
+            <p>P.O.BOX 4978</p>
+            <p>Kampala - Uganda</p>
+            <p>Tel: +256783220201</p>
+          </div>
+     
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        © 2019
+        </div>
+      </div>
+    </footer>
+      <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="{{url_for('static', filename='materialize/js/materialize.js')}}"></script>
+    </body>
+  </html>
+        
